@@ -4,14 +4,66 @@
 <head>
     <meta charset="UTF  -8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emisor de recibos de venta</title>
+    <title>Comprobantea de venta</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
             
 <body>  
+    
     <h1> Comprobantes <br> de venta</h1>
-    <img src="img/dsk.png" alt= "Dulces Sueños Kids">
-    <br> 
+    <img src="img/Dsk.png" alt= "Dulces Sueños Kids">
+    <br>
+
+    <div class="fecha_hoy"> 
+        <label> Fecha: <br></label> 
+        <input type="date" name="fecha" id="fecha">
+        <br><br>
+    </div>
+
+    <div class="nombre_cliente">
+        <label> Nombre del cliente: <br></label>
+        <input type="text" name="nombre" id="nombre">
+        <br><br>
+    </div>
+
+    <div class="numero_cel">
+        <label> Teléfono: <br></label>
+        <input type="phone" name="telefono" id="telefono">
+        <br><br>
+    </div>
+
+    <div class="descripcion">
+        <label> Descripción: <br></label>
+        <textarea 
+            name="descripcion" id="descrip" rows="4" cols="25">
+        </textarea>
+        <br><br>
+    </div>
+    
+    <div class="fecha_entrega">
+        <label> Fecha de entrega: <br></label>
+        <input type="date" name="fecha" id="fecha_ent">
+        <br><br>
+    </div>
+
+    <div class="precio">
+        <label> Precio total: <br></label>
+        <input type="number" name="precio" id="precio_t" step="0.01">
+        <br><br>
+    </div>
+
+    <div class="Adelanto">
+        <label> Adelanto: <br></label>
+        <input type="number" name="adelanto" id="adelanto_t" step="0.01">
+        <br><br>
+    </div>
+
+    <div class="form_p">
+        <label> Forma de pago: <br></label>
+        <input type="text" name="forma_pago" id="forma_pago">
+        <br><br>
+    </div>
+
     <button name "button">Nuevo</button>
 </body> 
 
