@@ -15,36 +15,42 @@
     <br>
 
     <div class="pan_fecha_hoy"> 
-        <label> Fecha: <br></label> 
+        <label for="fecha"> Fecha: <br></label> 
         <input type="date" 
                name="fecha"
-               id="fecha">
+               class="fecha">
         <br><br>
     </div>
 
     <div class="pan_nombre_cliente">
-        <label> Nombre del cliente: <br></label>
+        <label for="nombre"> Nombre del cliente: <br></label>
         <input type="text" 
                name="nombre" 
+               class="nombre"
+               placeholder="Ingrese el nombre del cliente"
                autocapitalize="characters"
-               pattern="[A-Z]"
-               id="nombre">
+               pattern="[A-Z][0-9]">
         <br><br>
     </div>
 
     <div class="pan_numero_cel">
-        <label> Teléfono: <br></label>
+        <label for="telefono"> Teléfono: <br></label>
         <input type="tel" 
                name="telefono"
+               class="telefono"
+               placeholder="Ingrese el número de teléfono del cliente"
                pattern="[0-9]"
-               maxlength="9"
-               id="telefono">
+               maxlength="9">
         <br><br>
     </div>
 
     <div class="pan_producto">
-        <label> Producto: <br></label>
-        <input list="productos" name="productos" id="producto">
+        <label for="producto"> Producto: <br></label>
+        <input list="productos" 
+               name="productos"
+               class="producto"
+               placeholder="Seleccione un producto de la lista"
+               autocapitalize="characters">
         <datalist id="productos">
             <option value="Cama"></option>
             <option value="Cama casita"></option>
@@ -60,11 +66,12 @@
     </div>
 
     <div class="pan_descripcion">
-        <label> Descripción: <br></label>
-        <textarea 
-            name="descripcion" 
-            id="descrip"
+        <label for="descrip"> Descripción: <br></label>
+        <textarea
+            name="descrip" 
+            class="descrip"
             placeholder="Ingrese la descripción del producto..."
+            autocapitalize="characters"
             rows="7"
             cols="35">
         </textarea>
@@ -72,37 +79,45 @@
     </div>
     
     <div class="pan_fecha_entrega">
-        <label> Fecha de entrega: <br></label>
-        <input type="date" name="fecha_ent" id="fecha_ent">
+        <label for="fecha_ent"> Fecha de entrega: <br></label>
+        <input type="date" 
+               name="fecha_ent"
+               class="fecha_ent">
         <br><br>
     </div>
 
     <div class="pan_precio">
-        <label> Precio total: <br></label>
+        <label for="precio"> Precio total: <br></label>
         <input type="number"
                name="precio"
-               id="precio"
-               value="0"
+               class="precio"
                step="50">
         <br><br>
     </div>
 
     <div class="pan_Adelanto">
-        <label> Adelanto: <br></label>
+        <label for="adelanto"> Adelanto: <br></label>
         <input type="number"
                name="adelanto"
-               id="adelanto"
-               value="0"
+               class="adelanto"
                step="50">
         <br><br>
     </div>
 
     <div class="pan_form_pago">
-        <label> Forma de pago: <br></label>
-        <input type="text"
+        <label for="forma_pago"> Forma de pago: <br></label>
+        <input list="forma_pago"
                name="forma_pago"
-               id="forma_pago">
-        <br><br>
+               class="forma_pago">
+        <datalist id="forma_pago">
+            <option value="Yape"></option>
+            <option value="Plin"></option>
+            <option value="Transferencia"></option>
+            <option value="Efectivo"></option>
+        </datalist>
+        </datalist>
+
+         <br><br>
     </div>
 
     <button name "button">Nuevo</button>
