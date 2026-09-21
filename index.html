@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF  -8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprobantea de venta</title>
+    <title>Comprobante de venta</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
             
@@ -14,53 +14,94 @@
     <img src="img/Dsk.png" alt= "Dulces Sueños Kids">
     <br>
 
-    <div class="fecha_hoy"> 
+    <div class="pan_fecha_hoy"> 
         <label> Fecha: <br></label> 
-        <input type="date" name="fecha" id="fecha">
+        <input type="date" 
+               name="fecha"
+               id="fecha">
         <br><br>
     </div>
 
-    <div class="nombre_cliente">
+    <div class="pan_nombre_cliente">
         <label> Nombre del cliente: <br></label>
-        <input type="text" name="nombre" id="nombre">
+        <input type="text" 
+               name="nombre" 
+               autocapitalize="characters"
+               pattern="[A-Z]"
+               id="nombre">
         <br><br>
     </div>
 
-    <div class="numero_cel">
+    <div class="pan_numero_cel">
         <label> Teléfono: <br></label>
-        <input type="phone" name="telefono" id="telefono">
+        <input type="tel" 
+               name="telefono"
+               pattern="[0-9]"
+               maxlength="9"
+               id="telefono">
         <br><br>
     </div>
 
-    <div class="descripcion">
+    <div class="pan_producto">
+        <label> Producto: <br></label>
+        <input list="productos" name="productos" id="producto">
+        <datalist id="productos">
+            <option value="Cama"></option>
+            <option value="Cama casita"></option>
+            <option value="Cama casita frontal"></option>
+            <option value="Cama Tee Pee"></option>
+            <option value="Ropero"></option>
+            <option value="Escritorio"></option>
+            <option value="Librero"></option>
+            <option value="Repisa"></option>
+            <option value="Mesa de noche"></option>
+        </datalist>
+        <br><br>
+    </div>
+
+    <div class="pan_descripcion">
         <label> Descripción: <br></label>
         <textarea 
-            name="descripcion" id="descrip" rows="4" cols="25">
+            name="descripcion" 
+            id="descrip"
+            placeholder="Ingrese la descripción del producto..."
+            rows="7"
+            cols="35">
         </textarea>
         <br><br>
     </div>
     
-    <div class="fecha_entrega">
+    <div class="pan_fecha_entrega">
         <label> Fecha de entrega: <br></label>
-        <input type="date" name="fecha" id="fecha_ent">
+        <input type="date" name="fecha_ent" id="fecha_ent">
         <br><br>
     </div>
 
-    <div class="precio">
+    <div class="pan_precio">
         <label> Precio total: <br></label>
-        <input type="number" name="precio" id="precio_t" step="0.01">
+        <input type="number"
+               name="precio"
+               id="precio"
+               value="0"
+               step="50">
         <br><br>
     </div>
 
-    <div class="Adelanto">
+    <div class="pan_Adelanto">
         <label> Adelanto: <br></label>
-        <input type="number" name="adelanto" id="adelanto_t" step="0.01">
+        <input type="number"
+               name="adelanto"
+               id="adelanto"
+               value="0"
+               step="50">
         <br><br>
     </div>
 
-    <div class="form_p">
+    <div class="pan_form_pago">
         <label> Forma de pago: <br></label>
-        <input type="text" name="forma_pago" id="forma_pago">
+        <input type="text"
+               name="forma_pago"
+               id="forma_pago">
         <br><br>
     </div>
 
